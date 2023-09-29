@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Agency.Helpers;
 using Agency.Models.Contracts;
 
 namespace Agency.Models
@@ -8,13 +9,13 @@ namespace Agency.Models
     {
         private const int PassengerCapacityMinValue = 1;
         private const int PassengerCapacityMaxValue = 800;
-        private const double PricePerKilometerMinValue = 0.10;
-        private const double PricePerKilometerMaxValue = 2.50;
+        //private const double PricePerKilometerMinValue = 0.10;
+        //private const double PricePerKilometerMaxValue = 2.50;
 
         private bool isLowCost;
 
         public Airplane(int id, int passengerCapacity, double pricePerKilometer, bool isLowCost)
-            : base(id, passengerCapacity, pricePerKilometer, PassengerCapacityMinValue, PassengerCapacityMaxValue, PricePerKilometerMinValue, PricePerKilometerMaxValue)
+            : base(id, passengerCapacity, pricePerKilometer)
         {
             IsLowCost = isLowCost;
         }
